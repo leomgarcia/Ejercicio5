@@ -2,14 +2,16 @@
 import pygame
 import math
 
+from pygame.examples.headless_no_windows_needed import screen
+
 from car_model import Car2
 from lane_following import CurvedRoad
 from defines import *
 
-def main2():
+def main2(size, title, GREEN):
 
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("mdeyo car sim")
+    pygame.display.set_caption(title)
     background = pygame.Surface(screen.get_size())
     background.fill((0, 0, 0))
 
@@ -25,7 +27,7 @@ def main2():
     car.speed = 100
     # car = laneFollowingCar1()
 
-    screen.fill(WHITE)
+    screen.fill(GREEN)
 
     # -------- Main Program Loop -----------
     t = 0
@@ -75,12 +77,13 @@ def main2():
 
         # First, clear the screen to white. Don't put other drawing commands
         # above this, or they will be erased with this command.
-        screen.fill(WHITE)
+        screen.fill(GREEN)
 
         # --- Game logic and drawing code combined
 
         drawRoad(screen)
         road.plotRoad(screen)
+
 
         rate = 10
         car.update(1 / rate)
