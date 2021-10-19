@@ -17,3 +17,4 @@ title = input("Asignar titulo:")
 main2(size, title, GREEN)
 
 
+
