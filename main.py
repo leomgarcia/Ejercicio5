@@ -15,3 +15,4 @@ size[0] = wide
 GREEN (0, 255, 0)
 title = input("Asignar titulo:")
 main2(size, title, GREEN)
+
